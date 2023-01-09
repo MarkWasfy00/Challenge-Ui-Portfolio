@@ -1,0 +1,102 @@
+@use "../../../../styles/Reusable.all.scss" as *;
+
+
+.nav {
+    @include flex(false,center,space-between);
+
+    .hamburgermenu {
+        @include flex(column,center,center);
+        gap: .3rem;
+       span {
+            height: .5rem;
+            width: 3rem;
+            background-color: $theme-greeb;
+            border-radius: 1rem;
+            transition: $theme-trans;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            span {
+                &:nth-child(2) {
+                    width: 2rem;
+                }
+                &:nth-child(3) {
+                    width: 1rem;
+                }
+            }
+        }
+    }
+
+    .profile {
+        @include flex(false,center,center);
+        gap: 2rem;
+        .picture {
+            width: 5rem;
+            img {
+                border: 2px solid $theme-greeb;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .headtitle {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $theme-greeb;
+        }
+    }
+
+
+    .mobilenav {
+        position: fixed;
+        background-color: $theme-black;
+        margin: 0;
+        padding: 2rem;
+        width: 20rem;
+        top: 0;
+        bottom: 0;
+        left: -25rem;
+        z-index: 99;
+        @include flex(column);
+        gap: 4rem;
+
+        .exit {
+            font-size: 2.5rem;
+            color: $theme-off-white;
+
+            &:hover {
+                cursor: pointer;
+                color: red;
+            }
+        }
+
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                font-size: 2.5rem;
+                text-transform: capitalize;
+                color: $theme-off-white;
+
+                &:hover {
+                    color: $theme-greeb;
+                }
+            }
+        }
+        
+    }
+
+    .pcnav {
+        display: none;
+    }
+}
+
+.shadow {
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: black;
+    opacity: .5;
+    z-index: 90;
+}
