@@ -52,16 +52,16 @@ const Header = () => {
             </ul>
             <ul className={styles.pcnav}>
                 <li>
-                    <a href="#">profile</a>
+                    <a className="font-500" href="#">profile</a>
                 </li>
                 <li>
-                    <a href="#">portofolio</a>
+                    <a className="font-500" href="#">portofolio</a>
                 </li>
                 <li>
-                    <a href="#">testimonial</a>
+                    <a className="font-500" href="#">testimonial</a>
                 </li>
                 <li>
-                    <a href="#">about</a>
+                    <a className="font-500" href="#">about</a>
                 </li>
             </ul>
         </nav>
