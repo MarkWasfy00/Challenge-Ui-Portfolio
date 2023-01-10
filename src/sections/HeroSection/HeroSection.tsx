@@ -4,6 +4,9 @@ import Lighting from "./components/Lighting"
 import Wraps from "./components/Wraps"
 import styles from "./HeroSection.module.scss"
 
+import frameOne from "../../assets/frame-1.png"
+import frameTwo from "../../assets/frame-2.png"
+
 const HeroSection = () => {
   return (
    <section className={styles.section}>
@@ -11,6 +14,12 @@ const HeroSection = () => {
     <Landing />
     <Lighting />
     <Wraps />
+    <div className={styles.frameone}>
+      <img src={frameOne} alt="frameone" />
+    </div>
+    <div className={styles.frametwo}>
+      <img src={frameTwo} alt="frametwo" />
+    </div>
    </section>
   )
 }

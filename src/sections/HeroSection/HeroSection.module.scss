@@ -6,4 +6,37 @@
     background-color: $theme-black;
     height: 100vh;
     overflow-x: hidden;
+
+
+    .frameone {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        transform: $theme-trans;
+        width: 10rem;
+        img {
+            width: 100%;
+        }
+
+        @include media(xs) {
+            width: 15rem;
+        }
+    }
+
+    .frametwo {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+        transform: $theme-trans;
+        width: 10rem;
+        img {
+            width: 100%;
+            
+        }
+
+        @include media(xs) {
+            width: 15rem;
+        }
+    }
 }
