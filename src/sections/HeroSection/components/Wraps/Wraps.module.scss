@@ -1,29 +1,25 @@
 @use "../../../../styles/Reusable.all.scss" as *;
 
-
 %wrap {
-    background-color: $theme-grey;
-    position: absolute;
-    left:  0;
-    right: 0;
-    height: 7rem;
-    background-image: url("../../../../assets/pattern.png");
-    background-size: 70rem, auto;
-    background-repeat: repeat;
+  background-color: $theme-grey;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 7rem;
+  background-image: url("../../../../assets/pattern.png");
+  background-size: 70rem, auto;
+  background-repeat: repeat;
 }
 
-
 .wrapback {
-    @extend %wrap;
-    bottom: 10rem;
-    transform: skew(0, 5deg);
-    
-
+  @extend %wrap;
+  bottom: 10rem;
+  transform: skew(0, 5deg);
 }
 
 .wrapfront {
-    @extend %wrap;
-    bottom: 4rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transform: skew(0, 0);
+  @extend %wrap;
+  bottom: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: skew(0, 0);
 }

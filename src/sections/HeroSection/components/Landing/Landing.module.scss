@@ -1,46 +1,45 @@
 @use "../../../../styles/Reusable.all.scss" as *;
 
 .landing {
-    @include flex(column,center,center);
-    margin-top: 10rem;
+  @include flex(column, center, center);
+  margin-top: 10rem;
 
-    @include media (xs) {
-        margin-top: 20rem;
+  @include media(xs) {
+    margin-top: 20rem;
+  }
+
+  .name {
+    font-size: clamp(3rem, 5vw, 10rem);
+    background-color: $theme-greeb;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: clamp(2rem, 2vw, 4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+    padding: 0.4rem;
+    color: $theme-white;
+
+    .highlight {
+      color: $theme-greeb;
     }
 
-    .name {
-        font-size: clamp(3rem, 5vw, 10rem);
-        background-color: $theme-greeb;
-        padding: 1rem 2rem;
-        text-transform: uppercase;
+    @include media(xs) {
+      letter-spacing: 1.5rem;
     }
+  }
 
-    .title {
-        font-size: clamp(2rem, 2vw, 4rem);
-        text-transform: uppercase;
-        letter-spacing: .7rem;
-        padding: .4rem;
-        color: $theme-white;
-
-        .highlight {
-            color: $theme-greeb;
-        }
-
-        @include media (xs) {
-            letter-spacing: 1.5rem;
-        }
+  .description {
+    width: 30rem;
+    text-align: center;
+    color: $theme-white;
+    line-height: 1.5rem;
+    text-transform: capitalize;
+    @include media(xs) {
+      font-size: clamp(0.5rem, 1vw, 1.2rem);
+      width: 50rem;
     }
-
-    .description {
-        width: 30rem;
-        text-align: center;
-        color: $theme-white;
-        line-height: 1.5rem;
-        text-transform: capitalize;
-        @include media (xs) {
-            font-size: clamp(.5rem, 1vw, 1.2rem);
-            width: 50rem;
-        }
-    }
-
+  }
 }

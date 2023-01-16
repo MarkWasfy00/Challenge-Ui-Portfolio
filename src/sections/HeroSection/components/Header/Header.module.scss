@@ -1,136 +1,133 @@
 @use "../../../../styles/Reusable.all.scss" as *;
 
-
 .nav {
-    @include flex(false,center,space-between);
+  @include flex(false, center, space-between);
 
-    .hamburgermenu {
-        @include flex(column,center,center);
-        gap: .3rem;
+  .hamburgermenu {
+    @include flex(column, center, center);
+    gap: 0.3rem;
 
-        @include media (xs) {
-            display: none;
+    @include media(xs) {
+      display: none;
+    }
+
+    span {
+      height: 0.5rem;
+      width: 3rem;
+      background-color: $theme-greeb;
+      border-radius: 1rem;
+      transition: $theme-trans;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        &:nth-child(2) {
+          width: 2rem;
         }
-
-       span {
-            height: .5rem;
-            width: 3rem;
-            background-color: $theme-greeb;
-            border-radius: 1rem;
-            transition: $theme-trans;
+        &:nth-child(3) {
+          width: 1rem;
         }
+      }
+    }
+  }
+
+  .profile {
+    @include flex(false, center, center);
+    gap: 2rem;
+    .picture {
+      width: 5rem;
+      img {
+        border: 2px solid $theme-greeb;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .headtitle {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $theme-greeb;
+    }
+  }
+
+  .mobilenav {
+    position: fixed;
+    background-color: $theme-black;
+    margin: 0;
+    padding: 2rem;
+    width: 20rem;
+    top: 0;
+    bottom: 0;
+    left: -25rem;
+    z-index: 99;
+    @include flex(column);
+    gap: 4rem;
+
+    @include media(xs) {
+      display: none;
+    }
+
+    .exit {
+      font-size: 2.5rem;
+      color: $theme-off-white;
+
+      &:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        color: $theme-off-white;
 
         &:hover {
-            cursor: pointer;
-
-            span {
-                &:nth-child(2) {
-                    width: 2rem;
-                }
-                &:nth-child(3) {
-                    width: 1rem;
-                }
-            }
+          color: $theme-greeb;
         }
+      }
     }
+  }
 
-    .profile {
-        @include flex(false,center,center);
-        gap: 2rem;
-        .picture {
-            width: 5rem;
-            img {
-                border: 2px solid $theme-greeb;
-                width: 100%;
-                border-radius: 50%;
-            }
-        }
+  .pcnav {
+    display: none;
+    @include media(xs) {
+      display: block;
+      margin: 0;
+      padding: 0;
+      @include flex(false, center);
+      gap: 6rem;
 
-        .headtitle {
-            font-size: 1.5rem;
-            text-transform: uppercase;
+      li {
+        list-style: none;
+        a {
+          color: $theme-white;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 1.8rem;
+          transition: $theme-trans;
+          &:hover {
             color: $theme-greeb;
+          }
         }
+      }
     }
-
-
-    .mobilenav {
-        position: fixed;
-        background-color: $theme-black;
-        margin: 0;
-        padding: 2rem;
-        width: 20rem;
-        top: 0;
-        bottom: 0;
-        left: -25rem;
-        z-index: 99;
-        @include flex(column);
-        gap: 4rem;
-
-        @include media (xs) {
-            display: none;
-        }
-
-        .exit {
-            font-size: 2.5rem;
-            color: $theme-off-white;
-
-            &:hover {
-                cursor: pointer;
-                color: red;
-            }
-        }
-
-        li {
-            list-style: none;
-            a {
-                text-decoration: none;
-                font-size: 2.5rem;
-                text-transform: capitalize;
-                color: $theme-off-white;
-
-                &:hover {
-                    color: $theme-greeb;
-                }
-            }
-        }
-        
-    }
-
-    .pcnav {
-        display: none;
-        @include media (xs) {
-            display: block;
-            margin: 0;
-            padding: 0;
-            @include flex(false,center);
-            gap: 6rem;
-
-            li {
-                list-style: none;
-                a {
-                    color: $theme-white;
-                    text-decoration: none;
-                    text-transform: capitalize;
-                    font-size: 1.8rem;
-                    transition: $theme-trans;
-                    &:hover {
-                        color: $theme-greeb;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 .shadow {
-    position: fixed;
-    inset: 0 0 0 0;
-    background-color: black;
-    opacity: .5;
-    z-index: 90;
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 90;
 
-    @include media (xs) {
-        display: none !important;
-    }
+  @include media(xs) {
+    display: none !important;
+  }
 }

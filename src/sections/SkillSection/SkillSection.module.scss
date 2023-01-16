@@ -1,7 +1,72 @@
-
-
+@use "../../styles/Reusable.all.scss" as *;
 
 .section {
-    height: 100vh;
-    
+  @include flex(column, center, center);
+
+  @include media(xs) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .views {
+    @include flex(column, center, center);
+    width: 100%;
+    background-color: $theme-greeb;
+    @include media(xs) {
+      width: 50%;
+    }
+    .top {
+      align-self: flex-start;
+      width: 100%;
+      max-width: 40rem;
+      img {
+        width: 100%;
+      }
+    }
+
+    .bot {
+      align-self: flex-end;
+      width: 100%;
+      max-width: 40rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .skills {
+    @include flex(column, center, center);
+    gap: 5rem;
+    padding: 8rem 3rem;
+
+    @include media(xs) {
+      width: 50%;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+    .info {
+      @include flex(column, center, center);
+      .title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        text-align: center;
+      }
+
+      .description {
+        font-size: 1.5rem;
+        max-width: 30rem;
+        text-align: center;
+        margin: 0;
+      }
+    }
+
+    .tecSkills {
+      @include flex(column, center, center);
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+    }
+  }
 }

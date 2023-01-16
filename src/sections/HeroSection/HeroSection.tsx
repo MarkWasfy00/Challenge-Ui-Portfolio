@@ -9,18 +9,18 @@ import frameTwo from "../../assets/frame-2.png"
 
 const HeroSection = () => {
   return (
-   <section className={styles.section}>
-    <Header />
-    <Landing />
-    <Lighting />
-    <Wraps />
-    <div className={styles.frameone}>
-      <img src={frameOne} alt="frameone" />
-    </div>
-    <div className={styles.frametwo}>
-      <img src={frameTwo} alt="frametwo" />
-    </div>
-   </section>
+    <section className={styles.section}>
+      <Header />
+      <Landing />
+      <Lighting />
+      <Wraps />
+      <div className={styles.frameone}>
+        <img src={frameOne} alt="frameone" />
+      </div>
+      <div className={styles.frametwo}>
+        <img src={frameTwo} alt="frametwo" />
+      </div>
+    </section>
   )
 }
 
