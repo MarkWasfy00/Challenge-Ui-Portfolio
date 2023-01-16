@@ -11,9 +11,17 @@
     i {
       color: black;
       font-size: 2rem;
+      transition: $theme-trans;
 
       &:nth-child(1){
-        margin-right: -1rem;
+        margin-right: -.5rem;
+      }
+      &:nth-child(2){
+        margin-left: -.5rem;
+      }
+
+      &:hover {
+        margin: 0;
       }
     }
   }
