@@ -1,99 +1,80 @@
 @use "../../styles/Reusable.all.scss" as *;
 
 .section {
-  @include flex(column, center, center);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
   @include media(md) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: unset;
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    
   }
 
   .views {
     @include flex(column);
-    width: 100%;
     background-color: $theme-greeb;
-    
+
     @include media(md) {
-      width:50%;
+      grid-row: span 1;
+      
     }
 
     .top {
-      align-self: flex-start;
-      width: 100%;
-      max-width: 40rem;
+      width: 40rem;
+
+      @include media(md) {
+        width: 60rem;
+      }
+
       img {
         width: 100%;
       }
-      @include media(md) {
-        max-width: 50rem;
-      }
+      
       
     }
 
     .bot {
-      align-self: flex-end;
-      width: 100%;
-      max-width: 40rem;
+     width: 40rem;
+     align-self: flex-end;
+
+     @include media(md) {
+      width: 60rem;
+    }
+
       img {
         width: 100%;
       }
 
-      @include media(md) {
-        max-width: 50rem;
-      }
     }
   }
 
   .skills {
-    @include flex(column, center, center);
-    gap: 5rem;
-    padding: 8rem 3rem;
+    @include flex(column,false,center);
+    gap: 8rem;
+    padding: 0 1rem;
     
-
-    @include media(md) {
-      width: 50%;
-      max-width: 60rem;
-      min-width: 50rem;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      gap: 15rem;
-    }
+    
     .info {
-      @include flex(column, center, center);
+      @include flex(column,center,center);
       .title {
-        font-size: 4rem;
-        text-transform: uppercase;
         text-align: center;
-
-        @include media(md) {
-          font-size: 6rem;
-        }
+        font-size: 5rem;
+        
       }
-
+      
       .description {
-        font-size: 1.5rem;
-        max-width: 30rem;
+        font-size: 2rem;
         text-align: center;
-        margin: 0;
-
-        @include media(md) {
-          font-size: 2rem;
-          max-width: 40rem;
-        }
+        max-width: 42rem;
+      
       }
     }
 
     .tecSkills {
-      @include flex(column, center, center);
-      gap: 2rem;
+      @include flex(column,center);
+      padding: 1rem;
       margin: 0;
-      padding: 0;
-      list-style: none;
-      width: 100%;
-
-      @include media(md) {
-        gap: 5rem;
-      }
+      gap: 4rem;
     }
   }
 }

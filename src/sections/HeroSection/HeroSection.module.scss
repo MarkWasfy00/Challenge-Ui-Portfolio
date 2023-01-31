@@ -4,6 +4,7 @@
   position: relative;
   background-color: $theme-black;
   height: $section-height;
+  min-height: 90rem;
   overflow-x: hidden;
 
   .frameone {
@@ -11,6 +12,7 @@
     transform: translateY(-50%);
     top: 50%;
     transform: $theme-trans;
+    
     width: 10rem;
     img {
       width: 100%;

@@ -1,11 +1,10 @@
 @mixin media($dimension) {
   @if $dimension == xs {
-    @media (min-width: 50rem) {
-      // 800px
+    @media (min-width: 50rem) { // 800px
       @content;
     }
   }@else if $dimension == md {
-    @media (min-width: 68.75rem) {
+    @media (min-width: 68.75rem) { // 1100 px
       @content
     }
   }
